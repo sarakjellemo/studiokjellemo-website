@@ -494,13 +494,24 @@
 
     /* ── INTRO MARQUEE ──────────────────────────────────── */
     .intro-marquee {
-      overflow: hidden;
+      overflow: visible;
       background: var(--warm-white);
       padding: 64px 0 0;
-      margin-top: -8px;
-      border-top: 8px solid var(--warm-white);
+      position: relative;
+      z-index: 1;
       -webkit-transform: translateZ(0);
       transform: translateZ(0);
+    }
+
+    .intro-marquee::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background: var(--warm-white);
+      z-index: 2;
     }
 
     .intro-marquee-header {
