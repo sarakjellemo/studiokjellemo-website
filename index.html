@@ -481,6 +481,8 @@
       overflow: hidden;
       background: var(--warm-white);
       padding: 64px 0 0;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
     }
 
     .intro-marquee-header {
@@ -510,6 +512,8 @@
       gap: 6px;
       width: max-content;
       will-change: transform;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
       -webkit-animation: intro-marquee-scroll 60s linear infinite;
       animation: intro-marquee-scroll 60s linear infinite;
     }
@@ -534,6 +538,8 @@
       height: 100%;
       object-fit: cover;
       display: block;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
     }
 
     @media (max-width: 1024px) {
