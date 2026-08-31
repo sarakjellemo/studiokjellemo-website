@@ -866,6 +866,12 @@
       .ai-tool-inner { padding: 64px 24px 40px; }
       .ai-marquee-wrap { padding-bottom: 40px; }
       .ai-marquee-item { flex: 0 0 220px; height: 160px; }
+      .ai-marquee-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+      .ai-marquee-wrap::-webkit-scrollbar { display: none; }
+      .ai-marquee-track { animation: none; width: max-content; }
+      .photo-marquee-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+      .photo-marquee-wrap::-webkit-scrollbar { display: none; }
+      .photo-marquee-track { animation: none; width: max-content; }
       .showcase { padding: 64px 24px; }
       .showcase-header { flex-direction: column; align-items: flex-start; gap: 20px; }
       .editorial-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 120px; }
@@ -1463,6 +1469,14 @@
         if (e.key === 'ArrowRight') navigate(1);
       }
     });
+
+    // Touch swipe support for lightbox
+    let touchStartX = 0;
+    lightbox.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+    lightbox.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) navigate(diff > 0 ? 1 : -1);
+    }, { passive: true });
 
     // init both galleries
     setupGallery('galleryOverlay',      'galleryClose',      '.gallery-open-btn');
