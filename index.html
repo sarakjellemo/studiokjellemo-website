@@ -2038,6 +2038,18 @@
       }
     });
 
+    // Hide hero once scrolled past the services (What I Do) section, show again on scroll up
+    (function () {
+      const hero = document.querySelector('.hero');
+      const services = document.querySelector('.services');
+      if (!hero || !services) return;
+      function update() {
+        const servicesBottom = services.getBoundingClientRect().bottom;
+        hero.style.display = servicesBottom <= 0 ? 'none' : '';
+      }
+      window.addEventListener('scroll', update, { passive: true });
+    })();
+
     // Intro marquee — rAF-driven so iOS never pauses it
     (function () {
       const track = document.querySelector('.intro-marquee-track');
