@@ -361,19 +361,6 @@
       z-index: 0;
     }
 
-    /* bottom edge fade to warm-white — prevents dark seam glitch when scrolling */
-    .hero::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 40px;
-      background: linear-gradient(to bottom, transparent, var(--warm-white));
-      z-index: 3;
-      pointer-events: none;
-    }
-
     /* full-image dark overlay */
     .hero::after {
       content: '';
@@ -509,7 +496,7 @@
     .intro-marquee {
       overflow: hidden;
       background: var(--warm-white);
-      padding: 64px 0 10px;
+      padding: 64px 0 20px;
       -webkit-transform: translateZ(0);
       transform: translateZ(0);
     }
