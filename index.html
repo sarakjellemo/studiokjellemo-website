@@ -353,10 +353,12 @@
     /* ── HERO ───────────────────────────────────────────── */
     .hero {
       margin-top: 64px;
-      min-height: calc(100vh - 64px);
-      position: relative;
+      min-height: calc(85vh - 64px);
+      position: sticky;
+      top: 0;
       overflow: hidden;
       background: #2b2017;
+      z-index: 0;
     }
 
     /* full-image dark overlay */
@@ -476,6 +478,20 @@
       margin-bottom: 20px;
     }
 
+    /* ── SCROLL-OVER EFFECT ─────────────────────────────── */
+    /* Everything after the hero stacks above it and slides over */
+    .intro-marquee,
+    .problem,
+    .services,
+    .process,
+    .selected-work,
+    .ai-tool,
+    .photography,
+    footer {
+      position: relative;
+      z-index: 1;
+    }
+
     /* ── INTRO MARQUEE ──────────────────────────────────── */
     .intro-marquee {
       overflow: hidden;
@@ -514,17 +530,6 @@
       will-change: transform;
       backface-visibility: hidden;
       -webkit-backface-visibility: hidden;
-      -webkit-animation: intro-marquee-scroll 60s linear infinite;
-      animation: intro-marquee-scroll 60s linear infinite;
-    }
-
-    @-webkit-keyframes intro-marquee-scroll {
-      from { -webkit-transform: translateX(0); transform: translateX(0); }
-      to   { -webkit-transform: translateX(-50%); transform: translateX(-50%); }
-    }
-    @keyframes intro-marquee-scroll {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
     }
 
     .intro-marquee-item {
@@ -1399,9 +1404,9 @@
       section { padding: 56px 24px; }
       .hero { min-height: 0 !important; max-height: 580px; }
       .hero-content { padding: 88px 24px 40px; }
-      .hero-content h1 { font-size: clamp(36px, 10vw, 56px); letter-spacing: -0.01em; margin-bottom: 12px; }
-      .hero-sub { font-size: 20px; font-weight: 800; line-height: 1.55; margin-bottom: 8px; }
-      .hero-body { font-size: 16px; line-height: 1.75; margin-bottom: 20px; }
+      .hero-content h1 { font-size: 40px; letter-spacing: -0.01em; margin-bottom: 12px; }
+      .hero-sub { font-size: 18px; font-weight: 800; line-height: 1.55; margin-bottom: 8px; }
+      .hero-body { font-size: 18px; line-height: 1.75; margin-bottom: 20px; }
 
       /* Problem */
       .problem { grid-template-columns: 1fr; padding: 56px 24px; gap: 32px; }
@@ -1443,10 +1448,7 @@
       /* Intro marquee */
       .intro-marquee { padding: 40px 0 0; }
       .intro-marquee-item { flex: 0 0 180px; height: 130px; }
-      .intro-marquee-track {
-        -webkit-animation-duration: 90s;
-        animation-duration: 90s;
-      }
+      /* intro marquee speed controlled by JS */
 
       /* AI Toolkit & Photography marquees — finger scroll on mobile */
       .ai-marquee-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
@@ -2032,6 +2034,32 @@
         alert('Something went wrong. Please try again or email sara.kjellemo@live.se directly.');
       }
     });
+
+    // Intro marquee — rAF-driven so iOS never pauses it
+    (function () {
+      const track = document.querySelector('.intro-marquee-track');
+      if (!track) return;
+      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+      const speed = isMobile ? 0.4 : 0.7; // px per frame (~90s / ~60s feel)
+      let x = 0;
+      let raf;
+
+      function step() {
+        const half = track.scrollWidth / 2;
+        x -= speed;
+        if (Math.abs(x) >= half) x = 0;
+        track.style.transform = 'translateX(' + x + 'px)';
+        raf = requestAnimationFrame(step);
+      }
+
+      function start() { if (!raf) raf = requestAnimationFrame(step); }
+      function stop()  { cancelAnimationFrame(raf); raf = null; }
+
+      start();
+      document.addEventListener('visibilitychange', () => {
+        document.hidden ? stop() : start();
+      });
+    })();
 
     // Intersection observer for subtle fade-in animations
     const observer = new IntersectionObserver((entries) => {
