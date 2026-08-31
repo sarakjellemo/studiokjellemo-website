@@ -563,7 +563,6 @@
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: flex-start;
-      bottom: 5px;
       padding: 100px var(--h-pad);
     }
 
@@ -1410,26 +1409,29 @@
       .hero-body { font-size: 18px; line-height: 1.75; margin-bottom: 20px; }
 
       /* Problem */
-      .problem { grid-template-columns: 1fr; padding: 56px 24px; gap: 32px; }
+      .problem { grid-template-columns: 1fr; padding: 56px 24px; gap: 32px; bottom: 5px; }
       .problem-image { display: none; }
       .problem-cta-links { flex-direction: column; }
       .problem-cta-links .btn { width: 100%; text-align: center; }
 
       /* Services */
-      .services { padding: 56px 24px; }
+      .services { padding: 56px 24px; bottom: 5px; }
       .services-grid { padding: 24px 24px; grid-template-columns: 1fr; gap: 24px; }
       .service-thumb { height: 200px; aspect-ratio: unset; }
 
       /* Process */
-      .process { padding: 56px 24px; }
+      .process { padding: 56px 24px; bottom: 5px; }
       .process-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
       .process-steps::before { display: none; }
 
       /* Selected work */
       .work-header { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
       .work-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; gap: 6px; }
+      .selected-work { bottom: 5px; }
 
       /* AI Toolkit & Photography */
+      .ai-tool { bottom: 5px; }
+      .photography { bottom: 5px; }
       .ai-tool-inner { padding: 36px 24px 24px; }
       .photography-inner { padding: 36px 24px 24px; }
       .work-item.wide { grid-column: span 1; }
@@ -1442,7 +1444,7 @@
       .pricing { padding: 56px 24px; }
 
       /* Footer */
-      footer { padding: 56px 24px 40px; }
+      footer { padding: 56px 24px 40px; bottom: 5px; }
       .footer-top { gap: 40px; }
       .form-row { grid-template-columns: 1fr; }
 
