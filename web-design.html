@@ -1,0 +1,1209 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Web Design — Studio Kjellemo | Freelance Web Designer Sweden</title>
+  <meta name="description" content="Bespoke web design by Studio Kjellemo. Clean, purposeful websites that convert. Based in Smögen, Sweden — working remotely worldwide and locally in Gothenburg and Stockholm." />
+  <meta name="keywords" content="web designer Sweden, freelance web design, webbdesign Sverige, webbdesigner Göteborg, webbdesigner Stockholm, custom website design, responsive web design, Smögen, Sotenäs, Studio Kjellemo, Sara Kjellemo" />
+  <meta name="author" content="Sara Kjellemo" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="canonical" href="https://www.studiokjellemo.com/web-design.html" />
+
+  <!-- Geo -->
+  <meta name="geo.region" content="SE-O" />
+  <meta name="geo.placename" content="Smögen, Sotenäs, Sweden" />
+  <meta name="geo.position" content="58.3536;11.2281" />
+  <meta name="ICBM" content="58.3536, 11.2281" />
+
+  <!-- Language & Locale -->
+  <meta http-equiv="content-language" content="en" />
+  <link rel="alternate" hreflang="en" href="https://www.studiokjellemo.com/web-design.html" />
+  <link rel="alternate" hreflang="sv" href="https://www.studiokjellemo.com/sv/web-design.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.studiokjellemo.com/web-design.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Studio Kjellemo" />
+  <meta property="og:title" content="Web Design — Studio Kjellemo | Freelance Web Designer Sweden" />
+  <meta property="og:description" content="Bespoke web design by Studio Kjellemo. Clean, purposeful websites that convert. Based in Smögen, Sweden — working remotely worldwide." />
+  <meta property="og:url" content="https://www.studiokjellemo.com/web-design.html" />
+  <meta property="og:image" content="https://www.studiokjellemo.com/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:locale:alternate" content="sv_SE" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Web Design — Studio Kjellemo | Freelance Web Designer Sweden" />
+  <meta name="twitter:description" content="Bespoke web design by Studio Kjellemo. Clean, purposeful websites that convert. Based in Smögen, Sweden — working remotely worldwide." />
+  <meta name="twitter:image" content="https://www.studiokjellemo.com/images/og-image.png" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.studiokjellemo.com/web-design.html#service",
+    "name": "Web Design",
+    "description": "Bespoke, responsive web design for businesses and brands. Clean, conversion-focused websites built for clarity and impact.",
+    "url": "https://www.studiokjellemo.com/web-design.html",
+    "provider": {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": "https://www.studiokjellemo.com/#business",
+      "name": "Studio Kjellemo",
+      "url": "https://www.studiokjellemo.com/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Smögen",
+        "addressRegion": "Västra Götaland",
+        "addressCountry": "SE"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Smögen" },
+        { "@type": "City", "name": "Gothenburg" },
+        { "@type": "City", "name": "Stockholm" },
+        { "@type": "AdministrativeArea", "name": "Worldwide" }
+      ],
+      "sameAs": ["https://www.instagram.com/studiokjellemo/"]
+    },
+    "serviceType": "Web Design",
+    "areaServed": { "@type": "AdministrativeArea", "name": "Worldwide" },
+    "inLanguage": ["en", "sv"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --lime: #efefb1;
+      --lime-dark: #e5e59a;
+      --off-white: #f7f5f0;
+      --warm-white: #fafafa;
+      --max-w: 1400px;
+      --h-pad: max(80px, calc((100vw - var(--max-w)) / 2));
+      --dark: #1a1a18;
+      --mid: #3d3d38;
+      --muted: #7a7a72;
+      --border: #e2e0d8;
+      --card-bg: #ffffff;
+      --section-lime: #efefb1;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Public Sans', sans-serif;
+      color: var(--dark);
+      background: var(--warm-white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ─────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 64px;
+      background: #ffffff; border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-logo img { height: 50px; width: auto; }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--dark); text-decoration: none;
+      transition: opacity .2s;
+    }
+    .nav-links a:hover { opacity: .55; }
+    .nav-has-dropdown { position: relative; }
+    .nav-has-dropdown > a::after {
+      content: ''; display: inline-block; width: 6px; height: 6px;
+      border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+      transform: rotate(45deg) translateY(-2px); margin-left: 6px; vertical-align: middle;
+      transition: transform .2s;
+    }
+    .nav-has-dropdown:hover > a::after { transform: rotate(-135deg) translateY(-2px); }
+    .nav-dropdown {
+      position: absolute; top: 100%; left: -24px;
+      padding-top: 16px;
+      list-style: none; min-width: 230px;
+      opacity: 0; visibility: hidden; pointer-events: none;
+      transform: translateY(6px);
+      transition: opacity .2s ease, transform .2s ease, visibility .2s;
+    }
+    .nav-dropdown::before {
+      content: ''; position: absolute; top: 16px; left: 0; right: 0; bottom: 0;
+      background: #fff; border: 1px solid var(--border);
+      box-shadow: 0 12px 40px rgba(0,0,0,.08);
+    }
+    .nav-has-dropdown:hover .nav-dropdown {
+      opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0);
+    }
+    .nav-dropdown li { position: relative; }
+    .nav-dropdown li:not(:last-child)::after {
+      content: ''; position: absolute; bottom: 0; left: 20px; right: 20px;
+      height: 1px; background: var(--border);
+    }
+    .nav-dropdown li a {
+      position: relative; display: block; padding: 14px 24px;
+      font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--dark);
+      text-decoration: none; transition: color .2s, padding-left .2s;
+    }
+    .nav-dropdown li a:hover { color: var(--muted); padding-left: 28px; opacity: 1; }
+    .nav-cta {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--dark);
+      border: 1.5px solid var(--dark); padding: 9px 22px;
+      text-decoration: none; transition: background .2s, color .2s;
+    }
+    .nav-cta:hover { background: var(--dark); color: #fff; }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 6px;
+      width: 36px;
+      height: 36px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 110;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--dark);
+      border-radius: 2px;
+      transition: transform .35s ease, opacity .35s ease;
+      transform-origin: center;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 105;
+      background: var(--warm-white);
+      display: flex;
+      flex-direction: column;
+      padding: 88px 32px 48px;
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: transform .4s cubic-bezier(.4,0,.2,1);
+    }
+    .mobile-menu.open { transform: translateX(0); }
+    .mobile-menu-close-btn {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      width: 40px;
+      height: 40px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .mobile-menu-close-btn::before,
+    .mobile-menu-close-btn::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 1.5px;
+      background: var(--dark);
+      border-radius: 2px;
+    }
+    .mobile-menu-close-btn::before { transform: rotate(45deg); }
+    .mobile-menu-close-btn::after  { transform: rotate(-45deg); }
+    .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 0; }
+    .mobile-menu ul li a {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dark);
+      text-decoration: none;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu-sub {
+      list-style: none;
+      padding: 8px 0 8px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu-sub li a {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: var(--muted) !important;
+      border-bottom: none !important;
+      padding: 10px 0 !important;
+    }
+    .mobile-menu-cta { margin-top: 40px; }
+
+    /* ── SHARED ──────────────────────────────────────── */
+    .section-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block; font-size: 11px; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none;
+      padding: 14px 32px; border-radius: 100px;
+      transition: background .2s, color .2s, transform .15s;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-lime { background: var(--lime); color: var(--dark); }
+    .btn-lime:hover { background: var(--lime-dark); }
+    .btn-dark { background: var(--dark); color: #fff; }
+    .btn-dark:hover { background: #333; }
+    .btn-outline { background: transparent; color: var(--dark); border: 1.5px solid var(--dark); }
+    .btn-outline:hover { background: var(--dark); color: #fff; }
+
+    /* ── HERO ────────────────────────────────────────── */
+    .service-hero {
+      margin-top: 64px;
+      background: var(--warm-white);
+      padding: 100px var(--h-pad) 0;
+      overflow: hidden;
+    }
+
+    .service-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: end;
+    }
+
+    .breadcrumb {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--muted);
+      margin-bottom: 32px; display: flex; align-items: center; gap: 10px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; transition: color .2s; }
+    .breadcrumb a:hover { color: var(--dark); }
+    .breadcrumb span { color: var(--border); }
+
+    .service-hero-content h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(40px, 4.5vw, 68px);
+      font-weight: 400; line-height: 1.1;
+      color: var(--dark); margin-bottom: 24px;
+    }
+
+    .hero-tagline {
+      font-size: 20px; font-weight: 700;
+      color: var(--dark); margin-bottom: 24px; line-height: 1.3;
+    }
+
+    .hero-body {
+      font-size: 16px; font-style: italic;
+      line-height: 1.75; color: var(--mid);
+      max-width: 460px; margin-bottom: 44px;
+    }
+
+    .service-hero-mockup {
+      align-self: end;
+      position: relative;
+    }
+
+    .browser-mockup {
+      background: var(--dark);
+      border-radius: 12px 12px 0 0;
+      overflow: hidden;
+      box-shadow: 0 -20px 60px rgba(0,0,0,.12);
+    }
+
+    .browser-bar {
+      background: #2d2d2a;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .browser-dots { display: flex; gap: 6px; }
+    .browser-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+    }
+    .browser-dot:nth-child(1) { background: #ff5f56; }
+    .browser-dot:nth-child(2) { background: #ffbd2e; }
+    .browser-dot:nth-child(3) { background: #27c93f; }
+
+    .browser-url {
+      flex: 1; background: #3a3a36; border-radius: 4px;
+      height: 24px; max-width: 280px;
+    }
+
+    .browser-screen {
+      aspect-ratio: 16/10;
+      background: #e8e2d8;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      scrollbar-width: none;
+    }
+    .browser-screen::-webkit-scrollbar { display: none; }
+
+    .browser-screen img { width: 100%; height: auto; display: block; }
+
+    /* ── WHAT'S INCLUDED ─────────────────────────────── */
+    .included {
+      padding: 100px var(--h-pad);
+      background: var(--warm-white);
+    }
+
+    .included-header { margin-bottom: 64px; }
+
+    .included-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3vw, 44px);
+      font-weight: 400; margin-top: 12px;
+    }
+
+    .included-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--border);
+    }
+
+    .included-feature {
+      background: var(--warm-white);
+      padding: 40px 44px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      transition: background .2s;
+    }
+
+    .included-feature:hover { background: #fff; }
+
+    .feature-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px; font-weight: 300;
+      color: var(--lime-dark); line-height: 1;
+      flex-shrink: 0; width: 28px;
+    }
+
+    .feature-text {}
+
+    .feature-name {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; margin-bottom: 8px;
+    }
+
+    .feature-desc {
+      font-size: 16px; line-height: 1.65; color: var(--mid);
+    }
+
+    .included-note {
+      margin-top: 32px;
+      padding: 24px 32px;
+      border: 1.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .note-icon {
+      width: 32px; height: 32px; flex-shrink: 0;
+      background: var(--lime); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .included-note p {
+      font-size: 14px; color: var(--mid); line-height: 1.6;
+    }
+
+    .included-note strong { color: var(--dark); }
+
+    /* ── PROCESS ─────────────────────────────────────── */
+    .process {
+      background: var(--section-lime);
+      padding: 100px var(--h-pad);
+    }
+
+    .process-header { margin-bottom: 72px; }
+
+    .process-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3vw, 44px);
+      font-weight: 400; margin-top: 12px;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      position: relative;
+    }
+
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: calc(12.5% + 24px);
+      right: calc(12.5% + 24px);
+      height: 1px;
+      background: rgba(26,26,24,.2);
+    }
+
+    .process-step { text-align: center; padding: 0 20px; }
+
+    .step-number {
+      width: 60px; height: 60px; border-radius: 50%;
+      border: 1.5px solid var(--dark);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 13px; font-weight: 500; letter-spacing: 0.04em;
+      background: var(--section-lime);
+      position: relative; z-index: 1;
+    }
+
+    .step-name {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .step-desc {
+      font-size: 16px; line-height: 1.65; color: var(--mid);
+      max-width: 200px; margin: 0 auto;
+    }
+
+    /* ── SELECTED WORK ───────────────────────────────── */
+    .selected-work {
+      background: var(--off-white);
+      padding: 100px var(--h-pad);
+    }
+
+    .work-header {
+      display: flex; align-items: flex-end;
+      justify-content: space-between; margin-bottom: 56px;
+    }
+
+    .work-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3vw, 44px); font-weight: 400;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .work-item { position: relative; }
+
+    .work-browser {
+      background: var(--dark);
+      border-radius: 8px 8px 0 0;
+      overflow: hidden;
+      margin-bottom: 0;
+      box-shadow: 0 8px 40px rgba(0,0,0,.1);
+    }
+
+    .work-browser-bar {
+      background: #2d2d2a;
+      padding: 10px 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+
+    .work-dots { display: flex; gap: 5px; }
+    .work-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .work-dot:nth-child(1) { background: rgba(255,255,255,.2); }
+    .work-dot:nth-child(2) { background: rgba(255,255,255,.15); }
+    .work-dot:nth-child(3) { background: rgba(255,255,255,.1); }
+
+    .work-url-bar {
+      flex: 1; background: rgba(255,255,255,.07);
+      border-radius: 3px; height: 18px; max-width: 200px;
+    }
+
+    .work-screen {
+      aspect-ratio: 16/10;
+      background: #e8e2d8;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      scrollbar-width: none;
+    }
+    .work-screen::-webkit-scrollbar { display: none; }
+
+    .work-screen img { width: 100%; height: auto; display: block; }
+
+    .work-info { padding: 20px 0 0; }
+
+    .work-tags {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 6px;
+    }
+
+    .work-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px; font-weight: 500;
+    }
+
+    /* ── NO BRIEF NEEDED ─────────────────────────────── */
+    .no-brief {
+      background: var(--warm-white);
+      padding: 100px var(--h-pad);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .no-brief-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(30px, 3vw, 46px);
+      font-weight: 400; line-height: 1.2;
+      margin-bottom: 24px; margin-top: 12px;
+    }
+
+    .no-brief-content p {
+      font-size: 16px; line-height: 1.75;
+      color: var(--mid); margin-bottom: 16px;
+    }
+
+    .no-brief-content p:last-of-type { margin-bottom: 36px; }
+
+    .no-brief-visual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 12px;
+    }
+
+    .nb-card {
+      padding: 28px;
+      border: 1.5px solid var(--border);
+      background: var(--card-bg);
+    }
+
+    .nb-card:first-child {
+      grid-column: span 2;
+      background: var(--dark); border-color: var(--dark);
+    }
+
+    .nb-card-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 10px;
+    }
+
+    .nb-card:first-child .nb-card-label { color: rgba(255,255,255,.4); }
+
+    .nb-card-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px; font-weight: 400; line-height: 1.4;
+      color: var(--dark);
+    }
+
+    .nb-card:first-child .nb-card-text { color: #fff; }
+
+    /* ── CTA ─────────────────────────────────────────── */
+    .service-cta {
+      background: var(--dark);
+      padding: 120px var(--h-pad);
+      text-align: center;
+    }
+
+    .service-cta .section-label { color: rgba(255,255,255,.4); }
+
+    .service-cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 4vw, 60px);
+      font-weight: 400; line-height: 1.15;
+      max-width: 640px; margin: 0 auto 20px; color: #fff;
+    }
+
+    .service-cta p {
+      font-size: 16px; font-style: italic;
+      color: rgba(255,255,255,.55);
+      max-width: 440px; margin: 0 auto 44px; line-height: 1.7;
+    }
+
+    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    .btn-cta-light {
+      display: inline-block; font-size: 11px; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      text-decoration: none; padding: 14px 32px; border-radius: 100px;
+      background: transparent; color: rgba(255,255,255,.7);
+      border: 1.5px solid rgba(255,255,255,.3);
+      transition: border-color .2s, color .2s, transform .15s;
+    }
+    .btn-cta-light:hover { border-color: #fff; color: #fff; transform: translateY(-1px); }
+
+    /* ── FOOTER ──────────────────────────────────────── */
+    footer {
+      background: var(--dark); color: #fff;
+      padding: 100px var(--h-pad) 60px;
+    }
+
+    .footer-top {
+      display: grid; grid-template-columns: 1fr 1.2fr;
+      gap: 80px; padding-bottom: 80px;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .footer-logo { display: inline-block; margin-bottom: 28px; }
+    .footer-logo img { height: 50px; width: auto; }
+
+    .footer-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px; font-weight: 300; font-style: italic;
+      line-height: 1.4; color: rgba(255,255,255,.85);
+      margin-bottom: 32px; max-width: 340px;
+    }
+
+    .footer-links { display: flex; gap: 28px; list-style: none; }
+    .footer-links a {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: rgba(255,255,255,.5);
+      text-decoration: none; transition: color .2s;
+    }
+    .footer-links a:hover { color: #fff; }
+
+    .footer-contact h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px; font-weight: 400; margin-bottom: 8px;
+    }
+
+    .footer-contact-sub {
+      font-size: 16px; color: rgba(255,255,255,.55);
+      margin-bottom: 16px; line-height: 1.6;
+    }
+
+    .footer-pricing-note {
+      font-size: 13px;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 32px;
+      line-height: 1.6;
+      padding: 12px 16px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 6px;
+    }
+
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-field { display: flex; flex-direction: column; gap: 6px; }
+    .form-field label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: rgba(255,255,255,.5);
+    }
+    .form-field input, .form-field select, .form-field textarea {
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.15);
+      color: #fff; font-family: 'Public Sans', sans-serif; font-size: 14px;
+      padding: 12px 16px; outline: none; transition: border-color .2s;
+      resize: none; appearance: none;
+    }
+    .form-field input::placeholder, .form-field textarea::placeholder { color: rgba(255,255,255,.3); }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--lime); }
+    .form-field select option { background: var(--dark); }
+    .form-submit { display: flex; align-items: center; gap: 16px; margin-top: 8px; }
+    .btn-submit {
+      background: var(--lime); color: var(--dark);
+      font-family: 'Public Sans', sans-serif; font-size: 11px;
+      font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      border: none; padding: 14px 32px; border-radius: 100px;
+      cursor: pointer; transition: background .2s, transform .15s;
+    }
+    .btn-submit:hover { background: var(--lime-dark); transform: translateY(-1px); }
+    .form-note { font-size: 12px; color: rgba(255,255,255,.35); }
+
+    .footer-bottom {
+      display: flex; align-items: center;
+      justify-content: space-between; padding-top: 40px;
+    }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,.3); }
+    .footer-social { display: flex; gap: 20px; }
+    .footer-social a {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(255,255,255,.4);
+      text-decoration: none; transition: color .2s;
+    }
+    .footer-social a:hover { color: #fff; }
+    .footer-social svg { display: block; flex-shrink: 0; }
+
+    .form-success {
+      display: none; text-align: center; padding: 48px 32px;
+      border: 1px solid rgba(255,255,255,.15);
+    }
+    .form-success.visible { display: block; }
+    .form-success-icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--lime); display: flex; align-items: center;
+      justify-content: center; margin: 0 auto 20px;
+    }
+    .form-success h4 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; margin-bottom: 10px; }
+    .form-success p { font-size: 13px; color: rgba(255,255,255,.55); }
+
+    /* ── RESPONSIVE ──────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .service-hero { padding: 80px 48px 0; }
+      .service-hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .included { padding: 80px 48px; }
+      .included-layout { grid-template-columns: 1fr; }
+      .included-layout .included-feature[style*="span 2"] { grid-column: span 1; }
+      .included-feature { padding: 32px 36px; }
+      .process { padding: 80px 48px; }
+      .process-steps { grid-template-columns: 1fr 1fr; gap: 48px; }
+      .process-steps::before { display: none; }
+      .selected-work { padding: 80px 48px; }
+      .work-grid { grid-template-columns: 1fr; }
+      .no-brief { padding: 80px 48px; grid-template-columns: 1fr; gap: 48px; }
+      .service-cta { padding: 80px 48px; }
+      footer { padding: 80px 48px 48px; }
+      .footer-top { grid-template-columns: 1fr; gap: 56px; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+      .service-hero { padding: 60px 24px 0; }
+      .included { padding: 64px 24px; }
+      .included-layout { display: block; }
+      .included-feature { grid-column: span 1 !important; padding: 28px 24px; border-bottom: 2px solid var(--border); }
+      .included-feature:last-child { border-bottom: none; }
+      .included-header { margin-bottom: 40px; }
+      .process { padding: 64px 24px; }
+      .process-steps { grid-template-columns: 1fr; gap: 40px; }
+      .selected-work { padding: 64px 24px; }
+      .work-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .no-brief { padding: 64px 24px; }
+      .no-brief-visual { grid-template-columns: 1fr; }
+      .nb-card:first-child { grid-column: span 1; }
+      .service-cta { padding: 80px 24px; }
+      footer { padding: 64px 24px 40px; }
+      .footer-top { gap: 48px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="images/logo-black.png" alt="Studio Kjellemo" /></a>
+    <ul class="nav-links">
+      <li class="nav-has-dropdown">
+        <a href="index.html#services">Services</a>
+        <ul class="nav-dropdown">
+          <li><a href="web-design.html">Web Design</a></li>
+          <li><a href="branding-identity.html">Branding &amp; Identity</a></li>
+          <li><a href="visual-content.html">Visual Content</a></li>
+          <li><a href="graphic-design.html">Graphic Design</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html#work">Portfolio</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="#contact">Pricing</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Contact</a>
+    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close-btn" id="mobileMenuClose" aria-label="Close menu"></button>
+    <ul>
+      <li><a href="index.html#services" class="mobile-menu-close">Services</a>
+        <ul class="mobile-menu-sub">
+          <li><a href="web-design.html">Web Design</a></li>
+          <li><a href="branding-identity.html">Branding &amp; Identity</a></li>
+          <li><a href="visual-content.html">Visual Content</a></li>
+          <li><a href="graphic-design.html">Graphic Design</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html#work" class="mobile-menu-close">Portfolio</a></li>
+      <li><a href="index.html#about" class="mobile-menu-close">About</a></li>
+      <li><a href="#contact" class="mobile-menu-close">Pricing</a></li>
+    </ul>
+    <div class="mobile-menu-cta">
+      <a href="#contact" class="btn btn-dark mobile-menu-close">Contact</a>
+    </div>
+  </div>
+
+  <!-- ① HERO -->
+  <section class="service-hero">
+    <div class="service-hero-inner">
+      <div class="service-hero-content">
+        <p class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>→</span>
+          Services
+        </p>
+        <h1>Web Design</h1>
+        <p class="hero-tagline">Websites that bring your brand to life.</p>
+        <p class="hero-body">Your website is often the first real interaction someone has with your business. It should look good, feel intuitive and make people want to stay. I design and build custom websites that combine strong visual direction, thoughtful user experience and clean, responsive design.</p>
+        <a href="#contact" class="btn btn-dark" style="align-self: flex-start;">Start your website project</a>
+      </div>
+      <div class="service-hero-mockup">
+        <div class="browser-mockup">
+          <div class="browser-bar">
+            <div class="browser-dots">
+              <div class="browser-dot"></div>
+              <div class="browser-dot"></div>
+              <div class="browser-dot"></div>
+            </div>
+            <div class="browser-url"></div>
+          </div>
+          <div class="browser-screen">
+            <img src="images/web-mockup-hero.png" alt="Website mockup" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ WHAT I CAN CREATE -->
+  <section class="included">
+    <div class="included-header">
+      <p class="section-label">What's included</p>
+      <h2>Custom websites, built for your business.</h2>
+    </div>
+
+    <div class="included-layout">
+      <div class="included-feature">
+        <div class="feature-num">01</div>
+        <div class="feature-text">
+          <p class="feature-name">Custom Website Design</p>
+          <p class="feature-desc">Designed from scratch to match your brand — no templates, no generic layouts. Every element is intentional and tailored to you.</p>
+        </div>
+      </div>
+
+      <div class="included-feature">
+        <div class="feature-num">02</div>
+        <div class="feature-text">
+          <p class="feature-name">Up to 6 Pages</p>
+          <p class="feature-desc">Home, About, Services, Portfolio, Contact and one more — structured to guide your visitors naturally through your offering.</p>
+        </div>
+      </div>
+
+      <div class="included-feature">
+        <div class="feature-num">03</div>
+        <div class="feature-text">
+          <p class="feature-name">Responsive Design</p>
+          <p class="feature-desc">Your website works beautifully on every screen — from wide desktop monitors to the phone your next client is browsing on right now.</p>
+        </div>
+      </div>
+
+      <div class="included-feature">
+        <div class="feature-num">04</div>
+        <div class="feature-text">
+          <p class="feature-name">Mobile &amp; Desktop Layouts</p>
+          <p class="feature-desc">Both layouts are designed with equal care. Mobile is not an afterthought — it's designed intentionally alongside the desktop experience.</p>
+        </div>
+      </div>
+
+      <div class="included-feature">
+        <div class="feature-num">05</div>
+        <div class="feature-text">
+          <p class="feature-name">Contact Forms</p>
+          <p class="feature-desc">Simple, well-designed contact forms that feel native to your site and make it easy for potential clients to reach you.</p>
+        </div>
+      </div>
+
+      <div class="included-feature">
+        <div class="feature-num">06</div>
+        <div class="feature-text">
+          <p class="feature-name">Basic SEO Structure</p>
+          <p class="feature-desc">Clean page titles, meta descriptions, heading hierarchy and semantic HTML — a solid foundation for your site to be found.</p>
+        </div>
+      </div>
+
+      <div class="included-feature" style="grid-column: span 2;">
+        <div class="feature-num">07</div>
+        <div class="feature-text">
+          <p class="feature-name">Brand Asset Integration</p>
+          <p class="feature-desc">Your logo, color palette, typography and imagery — existing or newly created — are integrated cohesively into the design from the start.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="included-note">
+      <div class="note-icon">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M7 1v6M7 10v.5" stroke="#1a1a18" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <p><strong>Please note:</strong> E-commerce and online shops are not currently included in my web design offering. If you're looking for a shop, I'm happy to point you in the right direction.</p>
+    </div>
+  </section>
+
+  <!-- ④ PROCESS -->
+  <section class="process">
+    <div class="process-header">
+      <p class="section-label">My approach</p>
+      <h2>How a website project works.</h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-number">01</div>
+        <p class="step-name">Discover</p>
+        <p class="step-desc">Understanding the business, goals, audience and visual direction.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">02</div>
+        <p class="step-name">Design</p>
+        <p class="step-desc">Creating the structure, layout and visual experience.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">03</div>
+        <p class="step-name">Build</p>
+        <p class="step-desc">Turning the approved design into a responsive, functional website.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">04</div>
+        <p class="step-name">Refine</p>
+        <p class="step-desc">Testing, polishing and making sure everything feels right before launch.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ SELECTED WORK -->
+  <section class="selected-work">
+    <div class="work-header">
+      <div>
+        <p class="section-label">Selected work</p>
+        <h2>Websites I've designed.</h2>
+      </div>
+      <a href="index.html#work" class="btn btn-outline">View all work</a>
+    </div>
+    <div class="work-grid">
+      <div class="work-item">
+        <div class="work-browser">
+          <div class="work-browser-bar">
+            <div class="work-dots">
+              <div class="work-dot"></div>
+              <div class="work-dot"></div>
+              <div class="work-dot"></div>
+            </div>
+            <div class="work-url-bar"></div>
+          </div>
+          <div class="work-screen">
+            <img src="images/project-1.png" alt="Mad Sun Marketing" />
+          </div>
+        </div>
+        <div class="work-info">
+          <p class="work-tags">Web Design &nbsp;·&nbsp; Branding</p>
+          <p class="work-title">Mad Sun Marketing</p>
+        </div>
+      </div>
+
+      <div class="work-item">
+        <div class="work-browser">
+          <div class="work-browser-bar">
+            <div class="work-dots">
+              <div class="work-dot"></div>
+              <div class="work-dot"></div>
+              <div class="work-dot"></div>
+            </div>
+            <div class="work-url-bar"></div>
+          </div>
+          <div class="work-screen">
+            <img src="images/project-2.png" alt="HållöExpressen" />
+          </div>
+        </div>
+        <div class="work-info">
+          <p class="work-tags">Web Design &nbsp;·&nbsp; Visual Identity</p>
+          <p class="work-title">HållöExpressen</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ NO BRIEF NEEDED -->
+  <section class="no-brief">
+    <div class="no-brief-content">
+      <p class="section-label">Not sure where to start?</p>
+      <h2>A website doesn't have to start with a perfect brief.</h2>
+      <p>Most clients I work with don't arrive with a fully formed brief — and that's completely fine. You don't need to know exactly what you want before getting in touch.</p>
+      <p>We can work through the structure, content and visual direction together. I'll ask the right questions, help shape the ideas and guide you through the decisions — so the result feels like you, not like a template someone else filled in.</p>
+      <a href="#contact" class="btn btn-dark" style="align-self: flex-start;">Let's talk</a>
+    </div>
+    <div class="no-brief-visual">
+      <div class="nb-card">
+        <p class="nb-card-label">You might say</p>
+        <p class="nb-card-text">"I need a website but I don't really know what pages I need or what it should look like."</p>
+      </div>
+      <div class="nb-card">
+        <p class="nb-card-label">That's fine</p>
+        <p class="nb-card-text">We figure out the structure together in the discovery phase.</p>
+      </div>
+      <div class="nb-card">
+        <p class="nb-card-label">Also fine</p>
+        <p class="nb-card-text">Starting without a brand, without copy, without photos — we can build toward all of it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ CTA -->
+  <section class="service-cta">
+    <p class="section-label">Ready to start?</p>
+    <h2>Let's build a website your business is proud of.</h2>
+    <p>Tell me about your business and what you're looking for.</p>
+    <div class="cta-actions">
+      <a href="#contact" class="btn btn-lime">Get in touch</a>
+      <a href="#contact" class="btn-cta-light">View pricing</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-top">
+      <div class="footer-info">
+        <div class="footer-logo"><img src="images/logo-white.png" alt="Studio Kjellemo" /></div>
+        <p class="footer-tagline">Let's build something you're proud to put your name on.</p>
+        <ul class="footer-links">
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#work">Portfolio</a></li>
+          <li><a href="#contact">Pricing</a></li>
+          <li><a href="https://www.instagram.com/studiokjellemo/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Start a project.</h3>
+        <p class="footer-contact-sub">Tell me a little about your brand and what you're looking for — I'll get back to you with a tailored quote.</p>
+        <p class="footer-pricing-note">Wondering about pricing? Every project is different — reach out and I'll put together something that fits your needs and budget.</p>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/mgaeoydk" method="POST">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="service">What are you looking for?</label>
+            <select id="service" name="service">
+              <option value="" disabled>Select a service</option>
+              <option selected>Web Design</option>
+              <option>Branding &amp; Visual Identity</option>
+              <option>Visual Content</option>
+              <option>Graphic Design</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="message">Tell me about your project</label>
+            <textarea id="message" name="message" rows="5" placeholder="What's your business, what do you need, and when do you need it?"></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn-submit">Send message</button>
+          </div>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="form-success-icon">
+            <svg width="24" height="20" viewBox="0 0 24 20" fill="none">
+              <path d="M2 10L8.5 16.5L22 2" stroke="#1a1a18" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4>Message sent!</h4>
+          <p>Thank you for reaching out. I'll be in touch soon.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Studio Kjellemo. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/studiokjellemo/" target="_blank" rel="noopener" aria-label="Instagram">
+          
+          Instagram
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburgerBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburgerBtn.classList.toggle('open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      hamburgerBtn.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('mobileMenuClose').addEventListener('click', closeMobileMenu);
+    document.querySelectorAll('.mobile-menu-close').forEach(el => {
+      el.addEventListener('click', closeMobileMenu);
+    });
+
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,.08)' : 'none';
+    });
+
+    // Contact form — Formspree
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = contactForm.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      try {
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          contactForm.style.display = 'none';
+          document.getElementById('formSuccess').classList.add('visible');
+        } else {
+          btn.textContent = 'Send message';
+          btn.disabled = false;
+          alert('Something went wrong. Please try again or email sara.kjellemo@live.se directly.');
+        }
+      } catch {
+        btn.textContent = 'Send message';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again or email sara.kjellemo@live.se directly.');
+      }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.included-feature, .process-step, .work-item, .nb-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity .5s ease, transform .5s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(node --version)",
+      "PowerShell(npx --version)",
+      "PowerShell(\\(Get-Content \"C:\\\\Users\\\\sarak_hqp5gpv\\\\OneDrive\\\\Dokument\\\\Projekt\\\\Studio Kjellemo\\\\studiokjellemo-website\\\\visual-content.html\"\\) -replace '\\\\.jpg', '.png' | Set-Content \"C:\\\\Users\\\\sarak_hqp5gpv\\\\OneDrive\\\\Dokument\\\\Projekt\\\\Studio Kjellemo\\\\studiokjellemo-website\\\\visual-content.html\" -Encoding utf8)"
+    ]
+  }
+}
