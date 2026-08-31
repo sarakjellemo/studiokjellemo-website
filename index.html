@@ -1065,6 +1065,93 @@
       color: var(--muted);
     }
 
+    /* ── AI TOOLKIT SECTION ─────────────────────────────── */
+    .ai-tool {
+      background: var(--section-lime);
+      overflow: hidden;
+      padding: 0;
+    }
+    .ai-tool-inner {
+      padding: 64px var(--h-pad) 40px;
+    }
+    .ai-tool-content {
+      max-width: 720px;
+    }
+    .ai-tool-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3vw, 44px);
+      font-weight: 400; line-height: 1.2;
+      margin-bottom: 24px; margin-top: 12px;
+    }
+    .ai-tool-content p {
+      font-size: 16px; line-height: 1.75;
+      color: var(--mid); margin-bottom: 16px;
+    }
+    .ai-tool-content p:last-child { margin-bottom: 0; }
+
+    .ai-marquee-wrap {
+      width: 100%; overflow: hidden;
+      padding-bottom: 64px;
+    }
+    .ai-marquee-track {
+      display: flex; gap: 16px;
+      width: max-content;
+      animation: ai-marquee-scroll 78s linear infinite;
+    }
+    @keyframes ai-marquee-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .ai-marquee-item {
+      flex: 0 0 320px; height: 300px;
+      overflow: hidden; border-radius: 2px;
+    }
+    .ai-marquee-item img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+
+    /* ── PHOTOGRAPHY SECTION ─────────────────────────────── */
+    .photography {
+      background: var(--warm-white);
+      border-top: 1px solid var(--border);
+      overflow: hidden;
+      padding: 0;
+    }
+    .photography-inner {
+      padding: 64px var(--h-pad) 40px;
+    }
+    .photography-inner h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3vw, 44px);
+      font-weight: 400; line-height: 1.2;
+      margin-bottom: 16px; margin-top: 12px;
+    }
+    .photography-inner p {
+      font-size: 16px; line-height: 1.75;
+      color: var(--mid); margin-bottom: 0;
+      max-width: 720px;
+    }
+    .photo-marquee-wrap {
+      width: 100%; overflow: hidden;
+      padding-bottom: 64px;
+    }
+    .photo-marquee-track {
+      display: flex; gap: 16px;
+      width: max-content;
+      animation: photo-marquee-scroll 50s linear infinite;
+    }
+    @keyframes photo-marquee-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .photo-marquee-item {
+      flex: 0 0 260px; height: 340px;
+      overflow: hidden; border-radius: 2px;
+    }
+    .photo-marquee-item img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+
     /* ── FOOTER / CONTACT ───────────────────────────────── */
     footer {
       background: var(--dark);
@@ -1313,8 +1400,8 @@
       .hero { min-height: 0 !important; max-height: 580px; }
       .hero-content { padding: 88px 24px 40px; }
       .hero-content h1 { font-size: clamp(36px, 10vw, 56px); letter-spacing: -0.01em; margin-bottom: 12px; }
-      .hero-sub { font-size: 17px; font-weight: 800; line-height: 1.55; }
-      .hero-body { font-size: 15px; line-height: 1.75; margin-bottom: 20px; }
+      .hero-sub { font-size: 20px; font-weight: 800; line-height: 1.55; margin-bottom: 8px; }
+      .hero-body { font-size: 16px; line-height: 1.75; margin-bottom: 20px; }
 
       /* Problem */
       .problem { grid-template-columns: 1fr; padding: 56px 24px; gap: 32px; }
@@ -1335,11 +1422,15 @@
       /* Selected work */
       .work-header { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
       .work-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; gap: 6px; }
+
+      /* AI Toolkit & Photography */
+      .ai-tool-inner { padding: 36px 24px 24px; }
+      .photography-inner { padding: 36px 24px 24px; }
       .work-item.wide { grid-column: span 1; }
       .work-item.tall { grid-row: span 1; }
       .work-label { padding: 20px 10px 10px; }
-      .work-label-cat { font-size: 7px; letter-spacing: 0.12em; }
-      .work-label-name { font-size: 12px; }
+      .work-label-cat { font-size: 9px; letter-spacing: 0.12em; }
+      .work-label-name { font-size: 15px; }
 
       /* Pricing */
       .pricing { padding: 56px 24px; }
@@ -1356,6 +1447,16 @@
         -webkit-animation-duration: 90s;
         animation-duration: 90s;
       }
+
+      /* AI Toolkit & Photography marquees — finger scroll on mobile */
+      .ai-marquee-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+      .ai-marquee-wrap::-webkit-scrollbar { display: none; }
+      .ai-marquee-track { animation: none; width: max-content; }
+      .ai-marquee-item { flex: 0 0 220px; height: 200px; }
+      .photo-marquee-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+      .photo-marquee-wrap::-webkit-scrollbar { display: none; }
+      .photo-marquee-track { animation: none; width: max-content; }
+      .photo-marquee-item { flex: 0 0 180px; height: 240px; }
     }
   </style>
 </head>
@@ -1630,6 +1731,114 @@
         </div>
       </a>
 
+    </div>
+  </section>
+
+  <!-- AI TOOLKIT -->
+  <section class="ai-tool" id="ai-images">
+    <div class="ai-tool-inner">
+      <div class="ai-tool-content">
+        <span class="section-label">The toolkit</span>
+        <h2>AI is one tool.<br>Creative direction is the work.</h2>
+        <p>I use AI alongside traditional image editing and design to produce visuals that feel considered, cohesive and genuinely connected to your brand — not just generated, but directed.</p>
+        <a href="visual-content.html#ai-images" class="btn btn-dark" style="margin-top:16px; display:inline-block;">See all images</a>
+      </div>
+    </div>
+    <div class="ai-marquee-wrap">
+      <div class="ai-marquee-track">
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-1.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-2.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-3.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-4.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-5.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-6.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-7.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-8.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-9.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-10.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-11.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-12.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-13.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-14.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-16.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-17.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-18.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-19.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-20.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-21.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-22.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-23.png" alt="" /></div>
+        <!-- duplicate for seamless loop -->
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-1.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-2.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-3.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-4.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-5.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-6.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-7.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-8.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-9.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-10.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-11.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-12.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-13.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-14.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-16.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-17.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-18.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-19.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-20.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-21.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-22.png" alt="" /></div>
+        <div class="ai-marquee-item"><img src="images/AI-images/ai-23.png" alt="" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTOGRAPHY -->
+  <section class="photography" id="photography">
+    <div class="photography-inner">
+      <span class="section-label">Photography</span>
+      <h2>Real moments,<br>carefully composed.</h2>
+      <p>From team portraits and product shots for your business, to the moments in life you never want to forget — I offer photography for both companies and private clients. Whether you need fresh imagery of your employees, polished product photography, or a photographer for the most memorable days of your life, I bring the same attention to detail and creative eye to every shoot.</p>
+      <a href="visual-content.html#photography" class="btn btn-dark" style="margin-top:16px; display:inline-block;">See all photos</a>
+    </div>
+    <div class="photo-marquee-wrap">
+      <div class="photo-marquee-track">
+        <div class="photo-marquee-item"><img src="images/Photos/photo-1.jpg" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-2.jpg" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-3.JPG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-4.JPG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-5.JPG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-6.JPG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-7.jpg" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-9.jpg" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-10.JPG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-11.JPG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-12.JPG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-13.JPEG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-14.JPEG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-15.JPEG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-16.JPEG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-17.JPEG" alt="" /></div>
+        <!-- duplicate for seamless loop -->
+        <div class="photo-marquee-item"><img src="images/Photos/photo-1.jpg" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-2.jpg" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-3.JPG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-4.JPG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-5.JPG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-6.JPG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-7.jpg" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-9.jpg" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-10.JPG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-11.JPG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-12.JPG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-13.JPEG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-14.JPEG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-15.JPEG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-16.JPEG" alt="" /></div>
+        <div class="photo-marquee-item"><img src="images/Photos/photo-17.JPEG" alt="" /></div>
+      </div>
     </div>
   </section>
 
