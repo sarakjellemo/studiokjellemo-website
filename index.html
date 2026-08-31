@@ -1409,29 +1409,26 @@
       .hero-body { font-size: 18px; line-height: 1.75; margin-bottom: 20px; }
 
       /* Problem */
-      .problem { grid-template-columns: 1fr; padding: 56px 24px; gap: 32px; bottom: 5px; }
+      .problem { grid-template-columns: 1fr; padding: 56px 24px; gap: 32px; }
       .problem-image { display: none; }
       .problem-cta-links { flex-direction: column; }
       .problem-cta-links .btn { width: 100%; text-align: center; }
 
       /* Services */
-      .services { padding: 56px 24px; bottom: 5px; }
+      .services { padding: 56px 24px; }
       .services-grid { padding: 24px 24px; grid-template-columns: 1fr; gap: 24px; }
       .service-thumb { height: 200px; aspect-ratio: unset; }
 
       /* Process */
-      .process { padding: 56px 24px; bottom: 5px; }
+      .process { padding: 56px 24px; }
       .process-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
       .process-steps::before { display: none; }
 
       /* Selected work */
       .work-header { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
       .work-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; gap: 6px; }
-      .selected-work { bottom: 5px; }
 
       /* AI Toolkit & Photography */
-      .ai-tool { bottom: 5px; }
-      .photography { bottom: 5px; }
       .ai-tool-inner { padding: 36px 24px 24px; }
       .photography-inner { padding: 36px 24px 24px; }
       .work-item.wide { grid-column: span 1; }
@@ -1444,7 +1441,7 @@
       .pricing { padding: 56px 24px; }
 
       /* Footer */
-      footer { padding: 56px 24px 40px; bottom: 5px; }
+      footer { padding: 56px 24px 40px; }
       .footer-top { gap: 40px; }
       .form-row { grid-template-columns: 1fr; }
 
@@ -2037,18 +2034,6 @@
         alert('Something went wrong. Please try again or email sara.kjellemo@live.se directly.');
       }
     });
-
-    // Hide hero once scrolled past the services (What I Do) section, show again on scroll up
-    (function () {
-      const hero = document.querySelector('.hero');
-      const services = document.querySelector('.services');
-      if (!hero || !services) return;
-      function update() {
-        const servicesBottom = services.getBoundingClientRect().bottom;
-        hero.style.display = servicesBottom <= 0 ? 'none' : '';
-      }
-      window.addEventListener('scroll', update, { passive: true });
-    })();
 
     // Intro marquee — rAF-driven so iOS never pauses it
     (function () {
