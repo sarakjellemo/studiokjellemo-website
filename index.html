@@ -509,9 +509,15 @@
       display: flex;
       gap: 6px;
       width: max-content;
+      will-change: transform;
+      -webkit-animation: intro-marquee-scroll 60s linear infinite;
       animation: intro-marquee-scroll 60s linear infinite;
     }
 
+    @-webkit-keyframes intro-marquee-scroll {
+      from { -webkit-transform: translateX(0); transform: translateX(0); }
+      to   { -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+    }
     @keyframes intro-marquee-scroll {
       from { transform: translateX(0); }
       to   { transform: translateX(-50%); }
