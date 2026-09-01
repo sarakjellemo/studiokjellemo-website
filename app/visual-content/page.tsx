@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import ImageGallery from "@/components/ImageGallery";
 import s from "@/styles/service.module.css";
 
 export const metadata: Metadata = {
@@ -85,6 +86,10 @@ export default function VisualContent() {
             <span className="section-label">The toolkit</span>
             <h2>AI is one tool.<br />Creative direction is the work.</h2>
             <p>I use AI alongside traditional image editing and design to produce visuals that feel considered, cohesive and genuinely connected to your brand — not just generated, but directed.</p>
+            <ImageGallery
+              images={AI_IMAGES.map((n) => `/images/AI-images/ai-${n}.png`)}
+              buttonLabel="See all images"
+            />
           </div>
         </div>
         <div className={s.aiMarqueeWrap}>
@@ -104,6 +109,10 @@ export default function VisualContent() {
           <span className="section-label">Photography</span>
           <h2>Real moments,<br />carefully composed.</h2>
           <p>From team portraits and product shots for your business, to the moments in life you never want to forget — I offer photography for both companies and private clients. Whether you need fresh imagery of your employees, polished product photography, or a photographer for the most memorable days of your life, I bring the same attention to detail and creative eye to every shoot.</p>
+          <ImageGallery
+            images={PHOTO_IMAGES.map((src) => `/images/Photos/${src}`)}
+            buttonLabel="See all photos"
+          />
         </div>
         <div className={s.photoMarqueeWrap}>
           <div className={s.photoMarqueeTrack}>

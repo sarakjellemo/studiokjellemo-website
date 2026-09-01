@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import HomeClient from "./HomeClient";
+import ImageGallery from "@/components/ImageGallery";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -173,7 +174,7 @@ export default function Home() {
             <span className="section-label">The toolkit</span>
             <h2>AI is one tool.<br />Creative direction is the work.</h2>
             <p>I use AI alongside traditional image editing and design to produce visuals that feel considered, cohesive and genuinely connected to your brand — not just generated, but directed.</p>
-            <Link href="/visual-content#ai-images" className="btn btn-dark" style={{ marginTop: 16, display: "inline-block" }}>See all images</Link>
+            <ImageGallery images={AI_IMAGES.map((n) => `/images/AI-images/ai-${n}.png`)} buttonLabel="See all images" />
           </div>
         </div>
         <div className={styles.aiMarqueeWrap}>
@@ -193,7 +194,7 @@ export default function Home() {
           <span className="section-label">Photography</span>
           <h2>Real moments,<br />carefully composed.</h2>
           <p>From team portraits and product shots for your business, to the moments in life you never want to forget — I offer photography for both companies and private clients. Whether you need fresh imagery of your employees, polished product photography, or a photographer for the most memorable days of your life, I bring the same attention to detail and creative eye to every shoot.</p>
-          <Link href="/visual-content#photography" className="btn btn-dark" style={{ marginTop: 16, display: "inline-block" }}>See all photos</Link>
+          <ImageGallery images={PHOTO_IMAGES.map((p) => `/images/Photos/${p.src}`)} buttonLabel="See all photos" />
         </div>
         <div className={styles.photoMarqueeWrap}>
           <div className={styles.photoMarqueeTrack}>
