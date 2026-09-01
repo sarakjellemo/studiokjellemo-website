@@ -30,7 +30,7 @@ export default function Home() {
           <Image src="/images/cover_photo_hero.png" alt="Studio Kjellemo" fill style={{ objectFit: "cover" }} priority />
         </div>
         <div className={styles.heroContent}>
-          <h1>Your brand deserves to<br />be seen.</h1>
+          <h1 className={styles.heroH1}>Your brand deserves to<br />be seen.</h1>
           <p className={styles.heroSub}>You have a vision. I make it visible.</p>
           <p className={styles.heroBody}>
             I help growing businesses build a visual identity that actually feels like them, through{" "}
@@ -44,10 +44,6 @@ export default function Home() {
 
       {/* INTRO MARQUEE */}
       <div className={styles.introMarquee}>
-        <div className={styles.introMarqueeHeader}>
-          <p className="section-label">A selection of work</p>
-          <h2>Design that moves brands forward.</h2>
-        </div>
         <HomeClient />
         <div className={styles.introMarqueeTrackWrap}>
           <div className={styles.introMarqueeTrack} id="introMarqueeTrack">

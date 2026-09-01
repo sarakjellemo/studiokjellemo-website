@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "Studio Kjellemo",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "3000", "."],
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
       "port": 3000
     }
   ]

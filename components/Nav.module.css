@@ -14,7 +14,7 @@
 }
 
 .navLogo { display: flex; align-items: center; }
-.navLogo img { height: 28px; width: auto; }
+.navLogo img { height: 40px; width: auto; }
 
 .navLinks {
   display: flex;

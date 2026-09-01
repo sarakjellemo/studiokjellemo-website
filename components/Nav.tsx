@@ -2,50 +2,29 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./Nav.module.css";
 
 export default function Nav() {
   const navRef = useRef<HTMLElement>(null);
-  const hamburgerRef = useRef<HTMLButtonElement>(null);
-  const menuRef = useRef<HTMLDivElement>(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const nav = navRef.current;
-    const hamburger = hamburgerRef.current;
-    const menu = menuRef.current;
-    if (!nav || !hamburger || !menu) return;
-
-    // Nav shadow on scroll
+    if (!nav) return;
     const onScroll = () => {
       nav.style.boxShadow =
         window.scrollY > 20 ? "0 2px 20px rgba(0,0,0,.08)" : "none";
     };
     window.addEventListener("scroll", onScroll, { passive: true });
-
-    // Hamburger toggle
-    const toggleMenu = () => {
-      const isOpen = menu.classList.toggle("open");
-      hamburger.classList.toggle("open", isOpen);
-      document.body.style.overflow = isOpen ? "hidden" : "";
-    };
-    hamburger.addEventListener("click", toggleMenu);
-
-    // Close on link click
-    const closeLinks = menu.querySelectorAll<HTMLElement>(".mobileMenuClose");
-    const close = () => {
-      menu.classList.remove("open");
-      hamburger.classList.remove("open");
-      document.body.style.overflow = "";
-    };
-    closeLinks.forEach((el) => el.addEventListener("click", close));
-    const closeBtn = menu.querySelector<HTMLButtonElement>(".mobileMenuCloseBtn");
-    closeBtn?.addEventListener("click", close);
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+  }, [isOpen]);
+
+  const close = () => setIsOpen(false);
 
   return (
     <>
@@ -68,29 +47,33 @@ export default function Nav() {
           <li><a href="#contact">Pricing</a></li>
         </ul>
         <a href="#contact" className={styles.navCta}>Contact</a>
-        <button ref={hamburgerRef} className={styles.navHamburger} aria-label="Open menu">
+        <button
+          className={`${styles.navHamburger}${isOpen ? " " + styles.open : ""}`}
+          aria-label="Open menu"
+          onClick={() => setIsOpen(true)}
+        >
           <span /><span /><span />
         </button>
       </nav>
 
-      <div ref={menuRef} className={styles.mobileMenu} id="mobileMenu">
-        <button className={`${styles.mobileMenuCloseBtn} mobileMenuCloseBtn`} aria-label="Close menu" />
+      <div className={`${styles.mobileMenu}${isOpen ? " " + styles.open : ""}`}>
+        <button className={styles.mobileMenuCloseBtn} aria-label="Close menu" onClick={close} />
         <ul>
           <li>
-            <a href="#services" className="mobileMenuClose">Services</a>
+            <a href="#services" onClick={close}>Services</a>
             <ul className={styles.mobileMenuSub}>
-              <li><Link href="/web-design" className="mobileMenuClose">Web Design</Link></li>
-              <li><Link href="/branding-identity" className="mobileMenuClose">Branding &amp; Identity</Link></li>
-              <li><Link href="/visual-content" className="mobileMenuClose">Visual Content</Link></li>
-              <li><Link href="/graphic-design" className="mobileMenuClose">Graphic Design</Link></li>
+              <li><Link href="/web-design" onClick={close}>Web Design</Link></li>
+              <li><Link href="/branding-identity" onClick={close}>Branding &amp; Identity</Link></li>
+              <li><Link href="/visual-content" onClick={close}>Visual Content</Link></li>
+              <li><Link href="/graphic-design" onClick={close}>Graphic Design</Link></li>
             </ul>
           </li>
-          <li><a href="#work" className="mobileMenuClose">Portfolio</a></li>
-          <li><a href="#about" className="mobileMenuClose">About</a></li>
-          <li><a href="#contact" className="mobileMenuClose">Pricing</a></li>
+          <li><a href="#work" onClick={close}>Portfolio</a></li>
+          <li><a href="#about" onClick={close}>About</a></li>
+          <li><a href="#contact" onClick={close}>Pricing</a></li>
         </ul>
         <div className={styles.mobileMenuCta}>
-          <a href="#contact" className="btn btn-dark mobileMenuClose">Contact</a>
+          <a href="#contact" className="btn btn-dark" onClick={close}>Contact</a>
         </div>
       </div>
     </>

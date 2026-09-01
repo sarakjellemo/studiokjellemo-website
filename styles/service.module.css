@@ -465,6 +465,13 @@
   border: 1px solid var(--border);
 }
 
+.workScreen {
+  height: 380px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
 .workScreen img { width: 100%; display: block; }
 
 .workTags { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
@@ -917,7 +924,8 @@
 
 /* ── BROWSER MOCKUP (web design hero) ──────── */
 .serviceHeroMockup {
-  align-self: end;
+  align-self: center;
+  margin-top: -180px;
   padding-bottom: 0;
 }
 
@@ -948,6 +956,13 @@
   border: 1px solid var(--border);
 }
 
+.browserScreen {
+  height: 340px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
 .browserScreen img { width: 100%; display: block; }
 
 /* ── RESPONSIVE ─────────────────────────────── */
@@ -956,6 +971,8 @@
   .serviceHeroInner { grid-template-columns: 1fr; gap: 48px; }
   .serviceHeroImage { aspect-ratio: 16/9; border-radius: 2px; }
   .serviceHeroContent { padding-bottom: 0; }
+  .serviceHeroMockup { margin-top: 0; align-self: auto; }
+  .browserScreen { height: 260px; }
   .intro { grid-template-columns: 1fr; padding: 80px 48px; gap: 48px; }
   .introVisual { aspect-ratio: 16/9; }
   .included { padding: 80px 48px; }
