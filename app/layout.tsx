@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Studio Kjellemo",
   },
   description:
-    "Studio Kjellemo is a freelance design studio by Sara Kjellemo, based in Smögen, Sweden. Specialising in web design, branding, visual content and graphic design — working remotely worldwide and locally in Gothenburg and Stockholm.",
+    "Studio Kjellemo is a freelance design studio by Sara Kjellemo, based in Sweden and working worldwide. Specialising in web design, branding, visual identity, graphic design and AI-powered visual content.",
   keywords: [
     "freelance designer Sweden",
     "web designer Smögen",
