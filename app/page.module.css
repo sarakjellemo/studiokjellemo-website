@@ -409,7 +409,7 @@
   .problem { grid-template-columns: 1fr; padding: 56px 24px; gap: 32px; }
   .problemImage { display: none; }
   .problemCtaLinks { flex-direction: column; }
-  .problemCtaLinks :global(.btn) { width: 100%; text-align: center; }
+  .problemCtaLinks :global(.btn) { width: fit-content; text-align: center; }
 
   .services { padding: 56px 24px; }
   .servicesGrid { grid-template-columns: 1fr; gap: 24px; padding: 24px; }
