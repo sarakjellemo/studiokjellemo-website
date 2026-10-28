@@ -39,7 +39,7 @@ export default function WebDesign() {
                 <div className={s.browserUrl} />
               </div>
               <div className={s.browserScreen}>
-                <img src="/images/web-mockup-hero.png" alt="Website mockup" />
+                <img src="/images/project-3.png" alt="Website mockup" />
               </div>
             </div>
           </div>
@@ -108,14 +108,17 @@ export default function WebDesign() {
         <div className={s.workHeader}>
           <div>
             <p className="section-label">Selected work</p>
-            <h2>Websites I&apos;ve designed.</h2>
+            <h2>Websites I&apos;ve designed and developed.</h2>
           </div>
           <Link href="/#work" className="btn btn-outline">View all work</Link>
         </div>
         <div className={s.workGrid}>
           {[
+            { img: "project-3.png", tags: "Web Design", title: "The Good Life Club" },
             { img: "project-1.png", tags: "Web Design · Branding", title: "Mad Sun Marketing" },
             { img: "project-2.png", tags: "Web Design · Visual Identity", title: "HållöExpressen" },
+            { img: "project-5.png", tags: "Web Design · Development", title: "GC Solutions" },
+            { img: "project-4.png", tags: "Web Design · Development", title: "Tufftoker Productions" },
           ].map((item) => (
             <div key={item.title} className={s.workItem}>
               <div className={s.workBrowser}>

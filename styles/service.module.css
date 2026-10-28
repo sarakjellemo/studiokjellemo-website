@@ -957,7 +957,7 @@
 }
 
 .browserScreen {
-  height: 340px;
+  height: 460px;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: thin;
@@ -967,12 +967,12 @@
 
 /* ── RESPONSIVE ─────────────────────────────── */
 @media (max-width: 1024px) {
-  .serviceHero { padding: 80px 48px 0; }
+  .serviceHero { padding: 80px 48px 80px; }
   .serviceHeroInner { grid-template-columns: 1fr; gap: 48px; }
   .serviceHeroImage { aspect-ratio: 16/9; border-radius: 2px; }
   .serviceHeroContent { padding-bottom: 0; }
   .serviceHeroMockup { margin-top: 0; align-self: auto; }
-  .browserScreen { height: 260px; }
+  .browserScreen { height: 320px; }
   .intro { grid-template-columns: 1fr; padding: 80px 48px; gap: 48px; }
   .introVisual { aspect-ratio: 16/9; }
   .included { padding: 80px 48px; }
@@ -1008,7 +1008,8 @@
 }
 
 @media (max-width: 768px) {
-  .serviceHero { padding: 60px 24px 0; }
+  .serviceHero { padding: 60px 24px 60px; }
+  .workScreen { height: 200px; }
   .intro { padding: 64px 24px; }
   .included { padding: 64px 24px; }
   .includedGrid { grid-template-columns: 1fr; }
