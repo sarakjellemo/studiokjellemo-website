@@ -95,3 +95,5 @@ button { font-family: inherit; }
   margin-bottom: 8px;
 }
 .form-success p { color: var(--mid); font-size: 15px; }
+
+body.moment-page nav { display: none !important; }

@@ -3,7 +3,8 @@
     "allow": [
       "PowerShell(node --version)",
       "PowerShell(npx --version)",
-      "PowerShell(\\(Get-Content \"C:\\\\Users\\\\sarak_hqp5gpv\\\\OneDrive\\\\Dokument\\\\Projekt\\\\Studio Kjellemo\\\\studiokjellemo-website\\\\visual-content.html\"\\) -replace '\\\\.jpg', '.png' | Set-Content \"C:\\\\Users\\\\sarak_hqp5gpv\\\\OneDrive\\\\Dokument\\\\Projekt\\\\Studio Kjellemo\\\\studiokjellemo-website\\\\visual-content.html\" -Encoding utf8)"
+      "PowerShell(\\(Get-Content \"C:\\\\Users\\\\sarak_hqp5gpv\\\\OneDrive\\\\Dokument\\\\Projekt\\\\Studio Kjellemo\\\\studiokjellemo-website\\\\visual-content.html\"\\) -replace '\\\\.jpg', '.png' | Set-Content \"C:\\\\Users\\\\sarak_hqp5gpv\\\\OneDrive\\\\Dokument\\\\Projekt\\\\Studio Kjellemo\\\\studiokjellemo-website\\\\visual-content.html\" -Encoding utf8)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\sarak_hqp5gpv\\\\Downloads\\\\Sara_Kjellemo_Resume.pdf\" \"C:\\\\Users\\\\sarak_hqp5gpv\\\\OneDrive\\\\Dokument\\\\Projekt\\\\Studio Kjellemo\\\\studiokjellemo-website\\\\public\\\\Sara_Kjellemo_Resume.pdf\" -Force)"
     ]
   }
 }

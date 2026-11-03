@@ -7,9 +7,10 @@ import styles from "./ImageGallery.module.css";
 interface Props {
   images: string[];
   buttonLabel: string;
+  buttonClassName?: string;
 }
 
-export default function ImageGallery({ images, buttonLabel }: Props) {
+export default function ImageGallery({ images, buttonLabel, buttonClassName }: Props) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<number | null>(null);
   const [mounted, setMounted] = useState(false);
@@ -34,7 +35,7 @@ export default function ImageGallery({ images, buttonLabel }: Props) {
 
   return (
     <>
-      <button className={styles.openBtn} onClick={() => setOpen(true)}>
+      <button className={buttonClassName ?? styles.openBtn} onClick={() => setOpen(true)}>
         {buttonLabel}
       </button>
 
